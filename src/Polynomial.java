@@ -33,28 +33,6 @@ public class Polynomial {
             if (other.coefficients.size() > i) result[i] += other.coefficients.get(i);
         }
         return new Polynomial(result);
-
-        /*ArrayList<Integer> bigger;
-        ArrayList<Integer> smaller;
-        if (coefficients.size() >= other.coefficients.size()) {
-            bigger = coefficients;
-            smaller = other.coefficients;
-        } else {
-            bigger = other.coefficients;
-            smaller = coefficients;
-        }
-        Polynomial result = new Polynomial(bigger);
-        for (int i = 0; i < smaller.size(); i++) {
-            result.coefficients.set(i, result.coefficients.get(i) + smaller.get(i));
-        }
-        return result;
-        *//*for (int i = 0; i < bigger.size(); i++) {
-            int toAdd = 0;
-            toAdd += bigger.get(i);
-            if (i < smaller.size()) toAdd += smaller.get(i);
-            result.coefficients.add(toAdd);
-        }
-         */
     }
 
     public Polynomial multiply (Polynomial other) {
@@ -84,6 +62,4 @@ public class Polynomial {
         }
         return result;
     }
-
-
 }
