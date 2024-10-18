@@ -7,11 +7,11 @@ class PolynomialTest {
 
     @Test
     public void testAddition() {
-        Polynomial p1 = new Polynomial(new int[]{1, 2, 3}); // 3x^2 + 2x + 1
+        Polynomial p1 = new Polynomial(new int[]{1, 2, 3, 5}); // 3x^2 + 2x + 1
         Polynomial p2 = new Polynomial(new int[]{4, 0, -3}); // -3x^2 + 4
 
         Polynomial result = p1.add(p2); // (3x^2 + 2x + 1) + (-3x^2 + 4) = 2x + 5
-        int[] expected = {5, 2, 0}; // 0x^2 + 2x + 5
+        int[] expected = {5, 2, 0, 5}; // 0x^2 + 2x + 5
 
         assertArrayEquals(expected, result.getCoefficients());
     }
